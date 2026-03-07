@@ -2,7 +2,7 @@ import { DocFooter } from '@/components/DocFooter';
 
 export function ColorsDocs() {
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none">
+    <article className="prose prose-neutral dark:prose-invert w-full max-w-none">
       <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">Colors</h1>
       <p className="lead text-lg text-muted-foreground">
         The color palette includes neutral grays, primary blues, and semantic colors for states like
@@ -33,7 +33,7 @@ export function ColorsDocs() {
       <p>
         Primary: <code>--pario-color-primary-50</code>, <code>--pario-color-primary-500</code>, etc.
       </p>
-      <DocFooter prev={{ label: 'Foundations', href: '/foundations' }} next={{ label: 'Components', href: '/components' }} />
+      <DocFooter prev={{ label: 'Foundations', href: '/foundations' }} next={{ label: 'Icons', href: '/foundations/icons' }} />
     </article>
   );
 }

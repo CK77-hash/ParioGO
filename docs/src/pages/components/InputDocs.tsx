@@ -6,7 +6,7 @@ export function InputDocs() {
   const [value, setValue] = useState('');
 
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none">
+    <article className="prose prose-neutral dark:prose-invert w-full max-w-none">
       <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">Input</h1>
       <p className="lead text-lg text-muted-foreground">
         Text input for forms with optional label and error state.

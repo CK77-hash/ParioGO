@@ -4,7 +4,7 @@ import { AlertCircle } from 'lucide-react';
 
 export function GetStarted() {
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none">
+    <article className="prose prose-neutral dark:prose-invert w-full max-w-none">
       <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">Get started</h1>
       <p className="lead text-lg text-muted-foreground">
         Welcome to the ParioGO Design System. This design system serves as the source of truth for

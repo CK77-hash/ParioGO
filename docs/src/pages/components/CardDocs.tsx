@@ -3,7 +3,7 @@ import { DocFooter } from '@/components/DocFooter';
 
 export function CardDocs() {
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none">
+    <article className="prose prose-neutral dark:prose-invert w-full max-w-none">
       <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">Card</h1>
       <p className="lead text-lg text-muted-foreground">
         Container for grouped content with optional header.
@@ -61,7 +61,7 @@ export function CardDocs() {
           </tbody>
         </table>
       </div>
-      <DocFooter prev={{ label: 'Input', href: '/components/input' }} next={{ label: 'Examples', href: '/examples' }} />
+      <DocFooter prev={{ label: 'Input', href: '/components/input' }} next={{ label: 'Accordion', href: '/components/accordion' }} />
     </article>
   );
 }

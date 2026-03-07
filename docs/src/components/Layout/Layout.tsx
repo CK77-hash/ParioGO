@@ -9,14 +9,14 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col font-sans">
       <Header />
       <div className="flex flex-1">
         <aside className="hidden w-64 shrink-0 overflow-y-auto border-r border-sidebar-border md:block">
           <Sidebar />
         </aside>
         <main className="flex min-w-0 flex-1">
-          <div className="docs-content w-full max-w-3xl flex-1 px-6 py-8 md:px-8">{children}</div>
+          <div className="docs-content flex w-full max-w-[700px] flex-1 flex-col items-center justify-start px-6 py-8 md:px-8">{children}</div>
           <aside className="hidden w-56 shrink-0 border-l border-border xl:block">
             <div className="sticky top-14 h-[calc(100vh-3.5rem)] overflow-auto px-6 py-8">
               <PageNav />

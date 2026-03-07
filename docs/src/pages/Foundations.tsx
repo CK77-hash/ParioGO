@@ -3,9 +3,9 @@ import { DocFooter } from '@/components/DocFooter';
 
 export function Foundations() {
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none">
+    <article className="prose prose-neutral dark:prose-invert w-full max-w-none">
       <h1 className="scroll-m-20 text-3xl font-bold tracking-tight">Foundations</h1>
-      <p>
+      <p className="lead text-lg text-muted-foreground">
         Design tokens define the visual language of the system. Use tokens instead of hardcoded
         values for consistency.
       </p>
@@ -14,10 +14,21 @@ export function Foundations() {
         <li>
           <Link to="/foundations/colors">Colors</Link> – primitives and semantic colors
         </li>
-        <li>Typography – font families, sizes, weights</li>
-        <li>Spacing – scale from 0 to 10</li>
-        <li>Radius – border radius values</li>
-        <li>Shadow – elevation levels</li>
+        <li>
+          <Link to="/foundations/icons">Icons</Link> – Lucide icon library and usage
+        </li>
+        <li>
+          <Link to="/foundations/typography">Typography</Link> – font families, sizes, weights
+        </li>
+        <li>
+          <Link to="/foundations/spacing">Spacing</Link> – scale from 0 to 10
+        </li>
+        <li>
+          <Link to="/foundations/themes">Themes</Link> – light and dark mode
+        </li>
+        <li>
+          <Link to="/foundations/elevation">Elevation</Link> – shadow and depth levels
+        </li>
       </ul>
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">Using tokens</h2>
       <p>

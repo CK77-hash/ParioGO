@@ -12,7 +12,7 @@ export function Header() {
       <Link to="/" className="shrink-0 font-semibold text-foreground hover:text-primary">
         ParioGO
       </Link>
-      <div className="flex flex-1 items-center justify-end gap-4 md:justify-between">
+      <div className="flex flex-1 items-end justify-end gap-4 md:justify-start">
         <div className="relative hidden w-full max-w-sm md:block">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input

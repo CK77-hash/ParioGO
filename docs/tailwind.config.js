@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Geist', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -36,6 +36,13 @@ module.exports = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            fontFamily: theme('fontFamily.sans').join(', '),
+          },
+        },
+      }),
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
