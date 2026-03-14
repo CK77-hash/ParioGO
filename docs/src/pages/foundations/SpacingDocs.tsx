@@ -1,4 +1,24 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 import { DocFooter } from '@/components/DocFooter';
+
+const SPACING_ROWS = [
+  { token: '--hepta-spacing-0', value: '0' },
+  { token: '--hepta-spacing-1', value: '4px' },
+  { token: '--hepta-spacing-2', value: '8px' },
+  { token: '--hepta-spacing-3', value: '12px' },
+  { token: '--hepta-spacing-4', value: '16px' },
+  { token: '--hepta-spacing-5', value: '20px' },
+  { token: '--hepta-spacing-6', value: '24px' },
+  { token: '--hepta-spacing-8', value: '32px' },
+  { token: '--hepta-spacing-10', value: '40px' },
+];
 
 export function SpacingDocs() {
   return (
@@ -19,26 +39,25 @@ gap: var(--hepta-spacing-2);`}</code>
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">
         Scale reference
       </h2>
-      <div className="overflow-x-auto rounded-lg border border-border">
-        <table>
-          <thead>
-            <tr>
-              <th>Token</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td><code>--hepta-spacing-0</code></td><td>0</td></tr>
-            <tr><td><code>--hepta-spacing-1</code></td><td>4px</td></tr>
-            <tr><td><code>--hepta-spacing-2</code></td><td>8px</td></tr>
-            <tr><td><code>--hepta-spacing-3</code></td><td>12px</td></tr>
-            <tr><td><code>--hepta-spacing-4</code></td><td>16px</td></tr>
-            <tr><td><code>--hepta-spacing-5</code></td><td>20px</td></tr>
-            <tr><td><code>--hepta-spacing-6</code></td><td>24px</td></tr>
-            <tr><td><code>--hepta-spacing-8</code></td><td>32px</td></tr>
-            <tr><td><code>--hepta-spacing-10</code></td><td>40px</td></tr>
-          </tbody>
-        </table>
+      <div className="rounded-lg border border-border">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="pl-4">Token</TableHead>
+              <TableHead>Value</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {SPACING_ROWS.map(({ token, value }) => (
+              <TableRow key={token}>
+                <TableCell className="pl-4">
+                  <code>{token}</code>
+                </TableCell>
+                <TableCell>{value}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
       </div>
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">
         Visual scale
