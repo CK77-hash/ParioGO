@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 import {
   Collapsible,
   CollapsibleContent,
@@ -54,6 +55,21 @@ export function AccordionDocs() {
           </CollapsibleContent>
         </Collapsible>
       </div>
+      <WhenToUse
+        items={[
+          'FAQs or help content that expands on demand',
+          'Long forms split into collapsible sections',
+          'Settings or options grouped by category',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Use aria-expanded to reflect open/closed state',
+          'Ensure trigger is focusable and keyboard-activatable',
+          'Consider aria-controls linking to the panel',
+        ]}
+      />
+      <Related components={[{ label: 'Tabs', href: '/components/tabs' }, { label: 'Card', href: '/components/card' }]} />
       <DocFooter
         prev={{ label: 'Components', href: '/components' }}
         next={{ label: 'Alert dialog', href: '/components/alert-dialog' }}

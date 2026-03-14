@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 import {
   Select,
   SelectContent,
@@ -54,6 +55,21 @@ export function SelectDocs() {
           </SelectContent>
         </Select>
       </div>
+      <WhenToUse
+        items={[
+          'Choosing one option from a list (country, currency, sort order)',
+          'Form fields with a known set of choices',
+          'When the list has 5+ options (use Radio for fewer)',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Uses native ARIA combobox/listbox pattern',
+          'Keyboard navigable (Arrow keys, Enter, Escape)',
+          'Ensure option text is descriptive for screen readers',
+        ]}
+      />
+      <Related components={[{ label: 'Input', href: '/components/input' }, { label: 'Dropdown', href: '/components/dropdown' }]} />
       <DocFooter
         prev={{ label: 'Search', href: '/components/search' }}
         next={{ label: 'Tabs', href: '/components/tabs' }}

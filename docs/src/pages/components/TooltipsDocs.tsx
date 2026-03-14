@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 
 export function TooltipsDocs() {
   return (
@@ -32,6 +33,21 @@ export function TooltipsDocs() {
           Hover for tooltip
         </button>
       </div>
+      <WhenToUse
+        items={[
+          'Icon buttons that need explanation',
+          'Truncated text with full content on hover',
+          'Additional context for controls',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Ensure tooltip is keyboard-focusable',
+          'Avoid putting critical info only in tooltips',
+          'Consider delay to avoid accidental triggers',
+        ]}
+      />
+      <Related components={[{ label: 'Dropdown', href: '/components/dropdown' }, { label: 'Button', href: '/components/button' }]} />
       <DocFooter
         prev={{ label: 'Tabs', href: '/components/tabs' }}
         next={{ label: 'Progress bar', href: '/components/progress-bar' }}

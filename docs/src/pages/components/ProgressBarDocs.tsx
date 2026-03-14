@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 
 export function ProgressBarDocs() {
   return (
@@ -36,6 +37,21 @@ export function ProgressBarDocs() {
           </div>
         </div>
       </div>
+      <WhenToUse
+        items={[
+          'File upload or download progress',
+          'Form completion (multi-step)',
+          'Loading states with known duration',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Use aria-valuenow, aria-valuemin, aria-valuemax',
+          'Use aria-label or aria-labelledby for context',
+          'For indeterminate, use aria-valuetext="Loading"',
+        ]}
+      />
+      <Related components={[{ label: 'Chart', href: '/components/chart' }, { label: 'Badge', href: '/components/badge' }]} />
       <DocFooter
         prev={{ label: 'Tooltips', href: '/components/tooltips' }}
         next={{ label: 'Search', href: '/components/search' }}

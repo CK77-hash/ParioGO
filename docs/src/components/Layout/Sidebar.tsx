@@ -72,6 +72,11 @@ const navItems = [
     label: 'Examples',
     path: '/examples',
     children: [
+      { label: 'Analytics dashboard', path: '/examples?demo=analytics-dashboard' },
+      { label: 'Kraken crypto dashboard', path: '/examples?demo=kraken-dashboard' },
+      { label: 'Kiwi flight search', path: '/examples?demo=kiwi-flight-search' },
+      { label: 'Rox dashboard', path: '/examples?demo=rox-dashboard' },
+      { label: 'Manus-style dashboard', path: '/examples?demo=manus-dashboard' },
       { label: 'Financial dashboard', path: '/examples?demo=financial-dashboard' },
       { label: 'Budget tracker', path: '/examples?demo=budget-tracker' },
       { label: 'Savings goals', path: '/examples?demo=savings-goals' },

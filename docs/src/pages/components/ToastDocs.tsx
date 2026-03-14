@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Related } from '@/components/DocSections';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 
@@ -57,6 +58,14 @@ toast.error('Something went wrong');`}</code>
           With description
         </Button>
       </div>
+      <WhenToUse
+        items={[
+          'Success or error feedback after an action',
+          'Non-blocking notifications',
+          'Temporary status updates (saved, copied)',
+        ]}
+      />
+      <Related components={[{ label: 'Alert dialog', href: '/components/alert-dialog' }]} />
       <DocFooter
         prev={{ label: 'Tabs', href: '/components/tabs' }}
         next={{ label: 'Tooltips', href: '/components/tooltips' }}

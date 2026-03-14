@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { ExternalLink } from 'lucide-react';
 
 export function TypographyDocs() {
   return (
@@ -7,6 +8,38 @@ export function TypographyDocs() {
       <p className="lead text-lg text-muted-foreground">
         Font families, sizes, and weights define the reading experience across the design system.
       </p>
+
+      <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">
+        Resources
+      </h2>
+      <p className="text-muted-foreground">
+        Download fonts from Google Fonts for design tools (Figma, Sketch) or local use:
+      </p>
+      <ul className="not-prose mt-4 flex flex-wrap gap-4">
+        <li>
+          <a
+            href="https://fonts.google.com/specimen/Vend+Sans"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm font-medium transition-colors hover:bg-muted"
+          >
+            Vend Sans
+            <ExternalLink className="h-4 w-4" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://fonts.google.com/specimen/Geist+Mono"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm font-medium transition-colors hover:bg-muted"
+          >
+            Geist Mono
+            <ExternalLink className="h-4 w-4" />
+          </a>
+        </li>
+      </ul>
+
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">
         Font families
       </h2>
@@ -16,9 +49,30 @@ export function TypographyDocs() {
           <code>--hepta-typography-font-family-sans</code> – primary UI and body text (Vend Sans, system-ui)
         </li>
         <li>
-          <code>--hepta-typography-font-family-mono</code> – code and technical content
+          <code>--hepta-typography-font-family-mono</code> – code and technical content (Geist Mono)
         </li>
       </ul>
+      <h3 className="mt-6 text-lg font-semibold">Sans (Vend Sans)</h3>
+      <div className="mt-2 rounded-lg border border-border bg-muted/30 p-6">
+        <p style={{ fontFamily: 'var(--hepta-typography-font-family-sans)' }} className="text-lg">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p style={{ fontFamily: 'var(--hepta-typography-font-family-sans)' }} className="mt-2 text-sm text-muted-foreground">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ · 0123456789
+        </p>
+      </div>
+      <h3 className="mt-6 text-lg font-semibold">Mono (Geist Mono)</h3>
+      <div className="mt-2 rounded-lg border border-border bg-muted/30 p-6">
+        <p style={{ fontFamily: 'var(--hepta-typography-font-family-mono)' }} className="font-mono text-lg">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+        <p style={{ fontFamily: 'var(--hepta-typography-font-family-mono)' }} className="font-mono mt-2 text-sm text-muted-foreground">
+          const greet = () =&gt; &quot;Hello, world!&quot;;
+        </p>
+        <p style={{ fontFamily: 'var(--hepta-typography-font-family-mono)' }} className="font-mono mt-1 text-sm text-muted-foreground">
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ · 0123456789
+        </p>
+      </div>
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">
         Font sizes
       </h2>

@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Related } from '@/components/DocSections';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export function AvatarDocs() {
@@ -34,6 +35,14 @@ export function AvatarDocs() {
           <AvatarFallback>AB</AvatarFallback>
         </Avatar>
       </div>
+      <WhenToUse
+        items={[
+          'User profile images in headers or sidebars',
+          'Comment or activity displays',
+          'Team or contact lists',
+        ]}
+      />
+      <Related components={[{ label: 'Badge', href: '/components/badge' }]} />
       <DocFooter
         prev={{ label: 'Alert dialog', href: '/components/alert-dialog' }}
         next={{ label: 'Badge', href: '/components/badge' }}

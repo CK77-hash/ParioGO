@@ -1,5 +1,6 @@
 import { Card } from '@hepta/components';
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Related } from '@/components/DocSections';
 
 export function CardDocs() {
   return (
@@ -26,6 +27,13 @@ export function CardDocs() {
           <Card title="Elevated card" variant="elevated">Elevated variant with shadow.</Card>
         </div>
       </div>
+      <WhenToUse
+        items={[
+          'Group related content (dashboard widgets, product cards)',
+          'Content that needs visual containment or elevation',
+          'Sections that benefit from a header/title',
+        ]}
+      />
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">
         Without title
       </h2>
@@ -61,6 +69,7 @@ export function CardDocs() {
           </tbody>
         </table>
       </div>
+      <Related components={[{ label: 'Accordion', href: '/components/accordion' }, { label: 'Tabs', href: '/components/tabs' }]} />
       <DocFooter prev={{ label: 'Input', href: '/components/input' }} next={{ label: 'Calendar', href: '/components/calendar' }} />
     </article>
   );

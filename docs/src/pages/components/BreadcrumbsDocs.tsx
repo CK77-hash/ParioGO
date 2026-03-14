@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 import { ChevronRight } from 'lucide-react';
 
 export function BreadcrumbsDocs() {
@@ -33,6 +34,21 @@ export function BreadcrumbsDocs() {
         <ChevronRight className="h-4 w-4 text-muted-foreground" />
         <span className="text-foreground">Breadcrumbs</span>
       </nav>
+      <WhenToUse
+        items={[
+          'Showing hierarchy in nested content (docs, file browsers)',
+          'Helping users navigate back up a structure',
+          'Providing context for the current page',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Use nav with aria-label="Breadcrumb"',
+          'Current page can use aria-current="page"',
+          'Separators can use aria-hidden',
+        ]}
+      />
+      <Related components={[{ label: 'Link', href: '/components/link' }]} />
       <DocFooter
         prev={{ label: 'Avatar', href: '/components/avatar' }}
         next={{ label: 'Button', href: '/components/button' }}

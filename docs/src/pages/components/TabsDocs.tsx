@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 
 export function TabsDocs() {
   const [active, setActive] = useState('overview');
@@ -61,6 +62,21 @@ export function TabsDocs() {
           {active === 'settings' && <p>Settings content goes here.</p>}
         </div>
       </div>
+      <WhenToUse
+        items={[
+          'Switching between related views (Overview, Details, Settings)',
+          'Grouping content that shares the same context',
+          'When users need to compare a few panels',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Uses role="tablist", role="tab", role="tabpanel"',
+          'Arrow keys navigate between tabs',
+          'aria-selected indicates active tab',
+        ]}
+      />
+      <Related components={[{ label: 'Accordion', href: '/components/accordion' }, { label: 'Card', href: '/components/card' }]} />
       <DocFooter
         prev={{ label: 'Radio button', href: '/components/radio-button' }}
         next={{ label: 'Tooltips', href: '/components/tooltips' }}

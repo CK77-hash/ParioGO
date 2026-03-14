@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 import { Check } from 'lucide-react';
 
 export function CheckboxDocs() {
@@ -50,6 +51,21 @@ export function CheckboxDocs() {
           <span>Indeterminate state</span>
         </label>
       </div>
+      <WhenToUse
+        items={[
+          'Multi-select (check all that apply)',
+          'Boolean form fields (opt-in, consent)',
+          'Toggle individual items in a list',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Associate label with checkbox via htmlFor and id',
+          'Use aria-checked="mixed" for indeterminate',
+          'Space toggles checked state',
+        ]}
+      />
+      <Related components={[{ label: 'Radio button', href: '/components/radio-button' }, { label: 'Select', href: '/components/select' }]} />
       <DocFooter
         prev={{ label: 'Breadcrumbs', href: '/components/breadcrumbs' }}
         next={{ label: 'Date picker', href: '/components/date-picker' }}

@@ -10,6 +10,11 @@ module.exports = {
   				'system-ui',
   				'-apple-system',
   				'sans-serif'
+  			],
+  			mono: [
+  				'Geist Mono',
+  				'ui-monospace',
+  				'monospace'
   			]
   		},
   		colors: {

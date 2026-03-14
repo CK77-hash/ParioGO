@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 
@@ -46,6 +47,21 @@ export function DropdownDocs() {
           </button>
         </div>
       </div>
+      <WhenToUse
+        items={[
+          'Contextual actions (Edit, Delete, Duplicate)',
+          'Menu overflow when many options exist',
+          'Triggering actions without navigating away',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Arrow keys navigate menu items',
+          'Escape closes the menu',
+          'Focus returns to trigger on close',
+        ]}
+      />
+      <Related components={[{ label: 'Select', href: '/components/select' }, { label: 'Menu bar', href: '/components/menubar' }]} />
       <DocFooter
         prev={{ label: 'Data table', href: '/components/data-table' }}
         next={{ label: 'Link', href: '/components/link' }}

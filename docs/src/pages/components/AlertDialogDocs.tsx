@@ -1,4 +1,5 @@
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -73,6 +74,21 @@ export function AlertDialogDocs() {
           </AlertDialogContent>
         </AlertDialog>
       </div>
+      <WhenToUse
+        items={[
+          'Destructive actions that need confirmation (delete, overwrite)',
+          'Critical decisions with irreversible consequences',
+          'Acknowledging important information',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Focus traps inside the dialog when open',
+          'Escape closes the dialog',
+          'Use role="alertdialog" for critical confirmations',
+        ]}
+      />
+      <Related components={[{ label: 'Toast', href: '/components/toast' }, { label: 'Button', href: '/components/button' }]} />
       <DocFooter
         prev={{ label: 'Accordion', href: '/components/accordion' }}
         next={{ label: 'Avatar', href: '/components/avatar' }}

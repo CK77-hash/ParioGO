@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Input } from '@hepta/components';
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 
 export function InputDocs() {
   const [value, setValue] = useState('');
@@ -26,6 +27,20 @@ export function InputDocs() {
         <Input label="Controlled" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Type here..." />
         <Input label="With error" error="This field is required" placeholder="Required field" />
       </div>
+      <WhenToUse
+        items={[
+          'Single-line text entry (names, emails, search)',
+          'Form fields that need validation feedback',
+          'Numeric input with appropriate input mode',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Associate label with input via htmlFor and id',
+          'Use aria-describedby for error messages',
+          'Use aria-invalid when error state is shown',
+        ]}
+      />
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight">
         Props
       </h2>
@@ -52,6 +67,7 @@ export function InputDocs() {
           </tbody>
         </table>
       </div>
+      <Related components={[{ label: 'Select', href: '/components/select' }, { label: 'Search', href: '/components/search' }]} />
       <DocFooter prev={{ label: 'Button', href: '/components/button' }} next={{ label: 'Card', href: '/components/card' }} />
     </article>
   );

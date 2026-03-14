@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@hepta/components';
 import { DocFooter } from '@/components/DocFooter';
+import { WhenToUse, Accessibility, Related } from '@/components/DocSections';
 
 export function ButtonDocs() {
   const [clickCount, setClickCount] = useState(0);
@@ -43,6 +44,21 @@ export function ButtonDocs() {
           Clicked {clickCount} times
         </Button>
       </div>
+      <WhenToUse
+        items={[
+          'Submit or trigger actions (Save, Submit, Cancel)',
+          'Navigate (links styled as buttons)',
+          'Toggle state (with variant to show active)',
+          'Open modals, dropdowns, or dialogs',
+        ]}
+      />
+      <Accessibility
+        items={[
+          'Buttons are focusable and keyboard-activatable with Enter/Space',
+          'Use aria-label for icon-only buttons',
+          'Prefer semantic <button> over <div> for click handlers',
+        ]}
+      />
       <h2 className="mt-10 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight" id="props">
         Props
       </h2>
@@ -78,6 +94,7 @@ export function ButtonDocs() {
           </tbody>
         </table>
       </div>
+      <Related components={[{ label: 'Input', href: '/components/input' }, { label: 'Link', href: '/components/link' }]} />
       <DocFooter prev={{ label: 'Breadcrumbs', href: '/components/breadcrumbs' }} next={{ label: 'Input', href: '/components/input' }} />
     </article>
   );

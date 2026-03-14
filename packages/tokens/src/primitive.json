@@ -16,9 +16,16 @@
     },
     "primary": {
       "50": { "value": "#e8f0fe", "$description": "Primary 50" },
+      "100": { "value": "#d2e3fc", "$description": "Primary 100" },
+      "200": { "value": "#aecbfa", "$description": "Primary 200" },
+      "300": { "value": "#7aacf4", "$description": "Primary 300" },
+      "400": { "value": "#3486e8", "$description": "Primary 400" },
       "500": { "value": "#0066cc", "$description": "Primary 500" },
       "600": { "value": "#0052a3", "$description": "Primary 600" },
-      "700": { "value": "#003d7a", "$description": "Primary 700" }
+      "700": { "value": "#003d7a", "$description": "Primary 700" },
+      "800": { "value": "#002952", "$description": "Primary 800" },
+      "900": { "value": "#001529", "$description": "Primary 900" },
+      "950": { "value": "#000a14", "$description": "Primary 950" }
     },
     "error": {
       "50": { "value": "#fce8e6", "$description": "Error 50" },
@@ -50,7 +57,7 @@
   "typography": {
     "fontFamily": {
       "sans": { "value": "'Vend Sans', system-ui, -apple-system, sans-serif", "$description": "Primary font family" },
-      "mono": { "value": "ui-monospace, monospace", "$description": "Monospace font" }
+      "mono": { "value": "'Geist Mono', ui-monospace, monospace", "$description": "Monospace font" }
     },
     "fontSize": {
       "xs": { "value": "12px", "$description": "Extra small" },

@@ -17,8 +17,18 @@ import { BillPayFullPageDemo } from './examples/BillPayExample';
 import { SavingsGoalsFullPageDemo } from './examples/SavingsGoalsExample';
 import { BudgetTrackerFullPageDemo } from './examples/BudgetTrackerExample';
 import { FinancialDashboardFullPageDemo } from './examples/FinancialDashboardExample';
+import { ManusDashboardFullPageDemo } from './examples/ManusDashboardExample';
+import { RoxDashboardFullPageDemo } from './examples/RoxDashboardExample';
+import { KiwiFlightSearchFullPageDemo } from './examples/KiwiFlightSearchExample';
+import { KrakenDashboardFullPageDemo } from './examples/KrakenDashboardExample';
+import { AnalyticsDashboardFullPageDemo } from './examples/AnalyticsDashboardExample';
 
 const DEMOS = [
+  { id: 'analytics-dashboard', label: 'Analytics dashboard', description: 'Mixpanel-style analytics with charts, metrics, filters, and breakdowns.', Component: AnalyticsDashboardFullPageDemo },
+  { id: 'kraken-dashboard', label: 'Kraken crypto dashboard', description: 'Crypto exchange dashboard with portfolio, watchlist, and buy/sell widget.', Component: KrakenDashboardFullPageDemo },
+  { id: 'kiwi-flight-search', label: 'Kiwi flight search', description: 'Flight search results with filters, date selector, and booking cards.', Component: KiwiFlightSearchFullPageDemo },
+  { id: 'rox-dashboard', label: 'Rox dashboard', description: 'AI agent hub with recommended actions, calendar, and tasks.', Component: RoxDashboardFullPageDemo },
+  { id: 'manus-dashboard', label: 'Manus-style dashboard', description: 'Meeting hub with analytics, suggested follow-ups, and chat input.', Component: ManusDashboardFullPageDemo },
   { id: 'financial-dashboard', label: 'Financial dashboard', description: 'Overview with balance cards, spending chart, and quick actions.', Component: FinancialDashboardFullPageDemo },
   { id: 'budget-tracker', label: 'Budget tracker', description: 'Track spending against category budgets with progress bars.', Component: BudgetTrackerFullPageDemo },
   { id: 'savings-goals', label: 'Savings goals', description: 'Set and track progress toward financial goals with contributions.', Component: SavingsGoalsFullPageDemo },
@@ -71,7 +81,7 @@ export function Examples() {
                   {label}
                 </button>
               </DialogTrigger>
-              <DialogContent className="max-w-[95vw] w-full max-h-[85vh] h-[85vh] p-0 gap-0 overflow-hidden flex flex-col">
+              <DialogContent className="max-w-7xl w-full max-h-[85vh] h-[85vh] p-0 gap-0 overflow-hidden flex flex-col">
                 <DialogHeader className="sr-only">
                   <DialogTitle>{label} demo</DialogTitle>
                 </DialogHeader>
